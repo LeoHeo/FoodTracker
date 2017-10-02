@@ -14,6 +14,7 @@ class ViewController: UIViewController, UITextFieldDelegate,
   @IBOutlet weak var nameTextField: UITextField!
   @IBOutlet weak var mealNameLabel: UILabel!
   @IBOutlet weak var photoImageView: UIImageView!
+  @IBOutlet weak var ratingControl: RatingControl!
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
@@ -52,10 +53,6 @@ class ViewController: UIViewController, UITextFieldDelegate,
   func textFieldDidEndEditing(_ textField: UITextField) {
     print("End Editing")
     mealNameLabel.text = textField.text
-  }
-  
-  @IBAction func setDefaultLabelText(_ sender: UIButton) {
-    mealNameLabel.text = "Default Text"
   }
   
   @IBAction func selectImageFromPhotoLibrary(_ sender: UITapGestureRecognizer) {
